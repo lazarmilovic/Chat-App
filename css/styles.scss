@@ -1,0 +1,269 @@
+$light_blue: rgb(162, 198, 235);
+$sky_blue: rgb(156, 188, 240);
+$blue: rgb(3, 83, 163);
+$grey: rgb(175, 185, 196);
+$dark_sliver: rgb(84, 88, 92);
+
+//175, 185, 196, 177, 179, 181
+*{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.container{
+	width: 1000px;
+	height: 500px;
+	display: flex;
+
+	.user_id{
+		display: none;
+	}
+
+	.users{
+		width: 35%;
+		display: flex;
+		border:2px solid;
+		border-color:$light_blue;
+		background-color:$blue;
+		flex-direction: column;
+
+
+		.available{
+			height: 50px;
+			font-weight: bold;
+			display: flex;
+			justify-content: center;
+			align-items:center;
+			color: white;
+			font-weight: bold;
+		}
+
+
+		.users_user{
+			
+			height: 70px;
+			border:2px solid;
+			border-color:$sky_blue;
+			background-color:white;
+			display: flex;
+			justify-content: space-between;
+			align-items:center;
+			padding-left:10px;
+			padding-right:10px;
+			cursor: pointer;
+
+			.users_user_info{
+				pointer-events:none;
+			}
+
+			.users_user_id{
+				visibility: hidden;
+				pointer-events: none;
+			}
+
+			.users_user_pic{
+				height: 100;
+				width: 20%;
+				pointer-events:none;
+
+				img{
+					height: 65px;
+					width: 60px;
+				}
+
+			}
+
+			.status{
+				height: 20px;
+				width: 20px;
+				border-radius: 50%;
+				background-color:black;
+			}
+
+			.active {
+				background-color: lime;
+			}
+		}
+
+		.users_user:hover{
+			background-color: $light_blue;
+		}
+	}
+	.chat{
+		
+		display: flex;
+		flex-direction: column;
+		width: 65%;
+		border: 2px solid;
+		border-color: $light_blue;
+
+
+		.chat_history{
+			
+			width: 100%;
+			height: 80%;
+			display: flex;
+			flex-direction: column;
+
+			.chat_history_none{
+				align-self: center;
+				display: flex;
+				height: 10%;
+
+				p{
+					color: blue;
+				}
+			}
+
+
+			.chat_history_user{
+				border: 2px solid;
+				border-color:white;
+				width: 100%;
+				height: 20%;
+				background-color: $grey;
+				display: flex;
+				justify-content: space-between;
+
+				.chat_history_user_pic{
+					width: 20%;
+					height: 100%;
+					background-position:center;
+					background-size:100%;
+					
+				}
+
+				.chat_history_user_info{
+					display: flex;
+					justify-content: center;
+					align-items:center;
+					color: white;
+					font-weight: bold;
+				}
+
+				.chat_history_user_id{
+					visibility: hidden;
+
+				}
+
+			}
+
+
+			.chat_history_chat{
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				height: 80%;
+				overflow-y: scroll;
+				background-color:white;
+		
+
+				.chat_history_chat_sent{
+					width: 45%;
+					display: flex;
+					flex-direction: column;
+					align-self:flex-end;
+					background-color:$light_blue;
+					border-radius:20px;
+					padding:5px;
+					
+				}
+
+				.chat_history_chat_received{
+					width: 45%;
+					display: flex;
+					flex-direction: column;
+					align-self:flex-start;
+					background-color:$grey;
+					border-radius:20px;
+					padding:5px;
+					border:1px solid;
+					border-color:$dark_sliver;
+					
+				}
+			}
+			
+		}
+		.chat_box {
+			width: 100%;
+			height: 20%;
+			border-top:2px solid;
+			border-color:white;
+			display: flex;
+			justify-content: center;	
+			align-items:center;
+			background-color:$light_blue;
+
+			form{
+				display: flex;
+				align-items:center;
+				width: 90%;
+				height: 90%;
+				background-color:red;
+			}
+
+			textarea{
+				width: 100%;
+				height: 100%;
+			}
+
+			button{
+				width: 80px;
+				height: 100%;
+				color: white;
+				background-color:$light_blue;
+				font-weight: bold;
+
+			}
+			
+		}
+	}
+}
+
+.login_container{
+	width: 300px;
+	height: 300px;
+	border: 2px solid;
+	border-color: black;
+	background-color: gray;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items:center;
+
+
+	form{
+		height: 40%;
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		align-self:center;
+
+		input{
+			width: 100%;
+			border: 2px solid;
+			border-color: $blue;
+		}
+
+		button{
+			width: 50%;
+			color: black;
+			border-radius: 20px;
+			border:2px solid;
+			border-color: blue;
+			background-color: white;
+		}
+		button:hover{
+			background-color: blue;
+		}
+	}
+
+}
